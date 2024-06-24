@@ -16,33 +16,33 @@ const Footer = () => {
 
         <div className="flex gap-14 pr-7">
           <div>
-            <div className="font-semibold text-sm leading-4">About</div>
-            <ul className="font-semibold text-sm text-[#6D6D6D] mt-6 space-y-2 cursor-pointer">
-              <li>About Us</li>
-              <li>Blog</li>
-              <li>Careers</li>
-              <li>Jobs</li>
-              <li>In Press</li>
+            <div className="font-semibold text-sm leading-4 cursor-default">About</div>
+            <ul className="font-semibold text-sm text-[#8C8C8C] mt-6 space-y-2 cursor-pointer">
+              <li className="hover:text-[#bd6969]">About Us</li>
+              <li className="hover:text-[#bd6969]">Blog</li>
+              <li className="hover:text-[#bd6969]">Careers</li>
+              <li className="hover:text-[#bd6969]">Jobs</li>
+              <li className="hover:text-[#bd6969]">In Press</li>
             </ul>
           </div>
           <div>
-            <div className="font-semibold text-sm leading-4">Support</div>
-            <ul className="font-semibold text-sm text-[#6D6D6D] mt-6 space-y-2 cursor-pointer">
-              <li>Contact us</li>
-              <li>Whatsapp</li>
-              <li>Online chat</li>
-              <li>Telegram</li>
-              <li>Instagram</li>
+            <div className="font-semibold text-sm leading-4 cursor-default">Support</div>
+            <ul className="font-semibold text-sm text-[#8C8C8C] mt-6 space-y-2 cursor-pointer">
+              <li className="hover:text-[#bd6969]">Contact us</li>
+              <li className="hover:text-[#bd6969]">Whatsapp</li>
+              <li className="hover:text-[#bd6969]">Online chat</li>
+              <li className="hover:text-[#bd6969]">Telegram</li>
+              <li className="hover:text-[#bd6969]">Instagram</li>
             </ul>
           </div>
           <div>
-            <div className="font-semibold text-sm leading-4">FAQ</div>
-            <ul className="font-semibold text-sm text-[#6D6D6D] mt-6 space-y-2">
-              <li>Account</li>
-              <li>Manage</li>
-              <li>Order</li>
-              <li>Payment</li>
-              <li>Return</li>
+            <div className="font-semibold text-sm leading-4 cursor-default">FAQ</div>
+            <ul className="font-semibold text-sm text-[#8C8C8C] mt-6 space-y-2 cursor-pointer">
+              <li className="hover:text-[#bd6969]">Account</li>
+              <li className="hover:text-[#bd6969]">Manage</li>
+              <li className="hover:text-[#bd6969]">Order</li>
+              <li className="hover:text-[#bd6969]">Payment</li>
+              <li className="hover:text-[#bd6969]">Return</li>
             </ul>
           </div>
         </div>
