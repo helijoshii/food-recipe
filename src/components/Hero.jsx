@@ -4,8 +4,8 @@ import { FoodSVG, FoodSVG2, FoodSVG3, FoodSVG4, FoodSVG5 } from "../icons";
 const Hero = () => {
   return (
     <>
-      <div className="flex flex-col items-center h-screen">
-        <div className="max-w-[702px] text-center px-4 mt-24">
+      <div className="flex flex-col items-center h-screen ">
+        <div className="max-w-[702px] text-center px-4 mt-24 ">
           <h1 className="font-bold text-6xl mb-4">
             Delicious Recipes For Home-Cooked Meals
           </h1>
