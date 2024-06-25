@@ -16,11 +16,11 @@ const Hero = () => {
             culinary expertise and try our recipes today.
           </p>
         </div>
-        {/* <FoodSVG className=" absolute bottom-20 right-28 " />
+        <FoodSVG className=" absolute bottom-20 right-28 " />
         <FoodSVG2 className=" absolute bottom-[230px] right-48 " />
         <FoodSVG3 className=" absolute top-[100px] right-[100px] " />
         <FoodSVG4 className=" absolute top-28 left-20 " />
-        <FoodSVG5 className=" absolute bottom-[100px] left-24 " /> */}
+        <FoodSVG5 className=" absolute bottom-[100px] left-24 " />
       </div>
     </>
   );

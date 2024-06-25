@@ -8,15 +8,14 @@ const Joke = () => {
 
   const jokeapi = async () => {
     const jokes = await axios.get(
-      `https://api.spoonacular.com/food/trivia/random?apiKey=f192d474e06a41c8a82be4ad8069848b&includeNutrition=true`
+      `https://api.spoonacular.com/food/trivia/random?apiKey=657a5d8319f94e9791258f69b7034779&includeNutrition=true`
     );
     setJoke(jokes.data.text);
-    console.log(jokes);
   };
 
   useEffect(() => {
     jokeapi();
-  },[]);
+  }, []);
 
   return (
     <div className="max-h-[500px] mt-20 relative flex justify-center items-center">

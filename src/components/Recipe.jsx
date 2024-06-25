@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import burger from "../assets/burger.jpg";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
 
 const Recipe = () => {
+  const { id } = useParams();
+  const [ingredients, setIngredients] = useState([]);
+
+  if (id) {
+    async function ingredientsData() {
+      const response = await axios.get(
+        `https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=657a5d8319f94e9791258f69b7034779`
+      );
+      setIngredients(response.data.ingredients);
+      console.log(response);
+    }
+
+    useEffect(() => {
+      ingredientsData();
+    }, []);
+  }
+
   return (
     <div className="mt-10 mx-20">
       <div>
@@ -19,7 +39,15 @@ const Recipe = () => {
         />
         <div className="text-left pr-28">
           <ul className="text-base text-slate-600 font-medium">
-            <li> 1 cup finely chopped cabbage</li>
+            {ingredients.map((e) => {
+              return (
+                <li>
+                  {e.amount.metric.value} {e.amount.metric.unit} {e.name}
+                </li>
+              );
+            })}
+
+            {/* <li> 1 cup finely chopped cabbage</li>
             <li>1 cup finely chopped carrot</li>
             <li>1 cup finely chopped capsicum</li>
             <li>1 cup finely chopped onion</li>
@@ -31,7 +59,7 @@ const Recipe = () => {
             <li>mayo</li>
             <li>mustard</li>
             <li>pickles</li>
-            <li>lettuce</li>
+            <li>lettuce</li> */}
           </ul>
         </div>
       </div>
@@ -55,11 +83,28 @@ const Recipe = () => {
       </div>
 
       <div className="mb-24 mt-20">
-        <p className="font-semibold text-3xl leading-8 text-slate-800 uppercase">Preparation</p>
+        <p className="font-semibold text-3xl leading-8 text-slate-800 uppercase">
+          Preparation
+        </p>
         <hr className="border-red-500 border-1 " />
         <p className="font-normal text-base leading-6 text-slate-500 mt-4">
-          The hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled. Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, bacon, or chiles; condiments such as ketchup, mayonnaise, mustard, relish, or "special sauce"; and are frequently placed on sesame seed buns.</p>
-          <p className="font-normal text-base leading-6 text-slate-500 mt-4">The hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled. Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, bacon, or chiles; condiments such as ketchup, mayonnaise, mustard, relish, or "special sauce"; and are frequently placed on sesame seed buns.</p>
+          The hamburger is a sandwich consisting of one or more cooked patties
+          of ground meat, usually beef, placed inside a sliced bread roll or
+          bun. The patty may be pan fried, grilled, smoked or flame broiled.
+          Hamburgers are often served with cheese, lettuce, tomato, onion,
+          pickles, bacon, or chiles; condiments such as ketchup, mayonnaise,
+          mustard, relish, or "special sauce"; and are frequently placed on
+          sesame seed buns.
+        </p>
+        <p className="font-normal text-base leading-6 text-slate-500 mt-4">
+          The hamburger is a sandwich consisting of one or more cooked patties
+          of ground meat, usually beef, placed inside a sliced bread roll or
+          bun. The patty may be pan fried, grilled, smoked or flame broiled.
+          Hamburgers are often served with cheese, lettuce, tomato, onion,
+          pickles, bacon, or chiles; condiments such as ketchup, mayonnaise,
+          mustard, relish, or "special sauce"; and are frequently placed on
+          sesame seed buns.
+        </p>
       </div>
     </div>
   );
