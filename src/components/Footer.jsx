@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="px-16 py-24 flex justify-between text-white ">
         <div className="max-w-[436px]">
           <hr className="border-[#FF0000] border-1 " />
-          <p className="font-semibold text-2xl mt-4 leading-8">Cookbuddy</p>
+          <p className="font-semibold text-2xl mt-4 leading-8">Yumly</p>
           <p className="text-sm font-normal mt-4 leading-4 text-[#8C8C8C]">
             A cooking platform aimed at those who are confused about finding
             recipes from anywhere in the world, available for web and mobile

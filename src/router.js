@@ -10,5 +10,5 @@ export const heli = createBrowserRouter([
   {
     path: "/recipe",
     Component: Recipe,
-  }
+  },
 ]);

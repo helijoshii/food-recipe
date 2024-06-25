@@ -4,9 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import SmoothScrolling from "./components/ReactLenis.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <SmoothScrolling>
-      <App />
-    </SmoothScrolling>
-  </React.StrictMode>
+  <SmoothScrolling>
+    <App />
+  </SmoothScrolling>
 );

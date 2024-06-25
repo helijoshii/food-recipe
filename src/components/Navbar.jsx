@@ -9,7 +9,7 @@ const Navbar = () => {
     >
       <div className="flex items-center space-x-4">
         <h1 className="text-2xl font-bold text-red-500 cursor-pointer">
-          Cookbuddy
+          Yumly
         </h1>
         <Lineicon className="mx-4" />
         <div className="flex items-center">
